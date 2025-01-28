@@ -2,17 +2,22 @@
 // Declaración del array de amigos
 let amigos = [];
 
+
 // Creación de la función para agregar a los amigos
 function agregarAmigo() {
     // Lectura de los datos
-    nombre = document.getElementById("amigo").value;
-    
+    let nombre = document.getElementById("amigo").value;
     // validación de la entrada de datos
-    if(nombre == ""){
+    if(nombre === ""){
         alert("Ingrese un nombre válido");
+    }else{
+        amigos.push(nombre);
+        console.log(amigos);
     }
 
-    console.log(nombre);
+    // limpiar el valor introducido
+    document.getElementById("amigo").value = "";
+
 }
 // Llamado de las funciones
 agregarAmigo();
