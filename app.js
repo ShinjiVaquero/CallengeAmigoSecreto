@@ -38,9 +38,13 @@ function actualizarListaHTML(){
     });
 }
 
-// Función para obtener el elemento de la lista
-function obtenerElemento(){
-    console.log(amigos);
+// Función para Sortear los elementos de una lista
+function sortearAmigo(){
+    // validar que el array no esté vacío
+    if(amigos.length === 0){
+        alert("No existen amigos para sortear");
+    }
+
 }
 
 // Llamado de las funciones
