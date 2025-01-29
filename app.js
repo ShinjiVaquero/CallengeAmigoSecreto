@@ -43,6 +43,11 @@ function sortearAmigo(){
     // validar que el array no esté vacío
     if(amigos.length === 0){
         alert("No existen amigos para sortear");
+    }else{
+        // Generación del índice aleatorio
+        let amigoSorteado = Math.floor(Math.random() * amigos.length);
+        console.log(amigoSorteado);
+        alert("El amigo sorteado es: " + amigos[amigoSorteado]);
     }
 
 }
