@@ -12,13 +12,21 @@ function agregarAmigo() {
         alert("Ingrese un nombre válido");
     }else{
         amigos.push(nombre);
-        // Invocación de la función para obtener el elemento
         obtenerElemento();
+        // Mostrado del array dentro de la lista del HTML
+        modificarElementoHTML("listaAmigos", amigos);
     }
 
     // limpiar el valor introducido
     document.getElementById("amigo").value = "";
 
+}
+
+// Función para modificar el elemento HTML
+function modificarElementoHTML(etiqueta, valor){
+    let etiquetaHTML = document.getElementById(etiqueta);
+
+    etiquetaHTML.innerHTML = valor;
 }
 
 // Función para obtener el elemento de la lista
