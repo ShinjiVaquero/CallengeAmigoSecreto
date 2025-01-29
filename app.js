@@ -12,12 +12,19 @@ function agregarAmigo() {
         alert("Ingrese un nombre válido");
     }else{
         amigos.push(nombre);
-        console.log(amigos);
+        // Invocación de la función para obtener el elemento
+        obtenerElemento();
     }
 
     // limpiar el valor introducido
     document.getElementById("amigo").value = "";
 
 }
+
+// Función para obtener el elemento de la lista
+function obtenerElemento(){
+    console.log(amigos);
+}
+
 // Llamado de las funciones
 agregarAmigo();
