@@ -12,9 +12,8 @@ function agregarAmigo() {
         alert("Ingrese un nombre válido");
     }else{
         amigos.push(nombre);
-        obtenerElemento();
-        // Mostrado del array dentro de la lista del HTML
-        modificarElementoHTML("listaAmigos", amigos);
+        // Llamado de lq función para crear los elementos del HTML
+        actualizarListaHTML();
     }
 
     // limpiar el valor introducido
@@ -22,11 +21,21 @@ function agregarAmigo() {
 
 }
 
-// Función para modificar el elemento HTML
-function modificarElementoHTML(etiqueta, valor){
-    let etiquetaHTML = document.getElementById(etiqueta);
+// Función para actualizar la lista del HTML
+function actualizarListaHTML(){
+    let lista = document.getElementById("listaAmigos");
+    // Limpiar la lista antes de agregar los elementos
+    lista.innerHTML = "";
 
-    etiquetaHTML.innerHTML = valor;
+    // Iteración para agregar a los amigos a la lista
+    amigos.forEach(amigo => {
+        // se declara una variable para crear el elemento li
+        let li = document.createElement("li");
+        // Se asigna el valor del amigo al contenido de li
+        li.textContent = amigo;
+        // Se crea el elemento li de la lista
+        lista.appendChild(li);
+    });
 }
 
 // Función para obtener el elemento de la lista
