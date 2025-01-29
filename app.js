@@ -47,7 +47,14 @@ function sortearAmigo(){
         // Generación del índice aleatorio
         let amigoSorteado = Math.floor(Math.random() * amigos.length);
         console.log(amigoSorteado);
-        alert("El amigo sorteado es: " + amigos[amigoSorteado]);
+        // Seteado del ganador
+        let ganador = document.getElementById("resultado");
+        ganador.innerHTML = ("Tu amigo sorteaado es: " + amigos[amigoSorteado]);
+
+        // Limpiado de la lista
+        let lista = document.getElementById("listaAmigos");
+        lista.innerHTML = "";
+
     }
 
 }
